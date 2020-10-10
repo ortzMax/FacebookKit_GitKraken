@@ -15,7 +15,9 @@ class PostCell: LBTAListCell<String> {
     let nameLabel = UILabel(text: "Name Label")
     let dateLabel = UILabel(text: "Friday at 11:11 AM")
     let postText = UILabel(text: "Here is some text")
-    let imageViewGrill = UIView(backgroundColor: .yellow)
+//    let imageViewGrill = UIView(backgroundColor: .yellow)
+    
+    let photosGrillCOntroller = PhotosGrillController()
     
     override func setupViews() {
         backgroundColor = .white
@@ -24,7 +26,7 @@ class PostCell: LBTAListCell<String> {
                      stack(nameLabel, dateLabel),
                      spacing: 8).padLeft(12).padRight(12).padTop(12),
               postText,
-              imageViewGrill,
+              photosGrillCOntroller.view,
               spacing: 8)
     }
 }
@@ -35,11 +37,11 @@ class MainController: LBTAListController<PostCell, String>, UICollectionViewDele
         
         collectionView.backgroundColor = .init(white: 0.9, alpha: 1)
         
-        self.items = ["hello", "WORLD"]
+        self.items = ["hello", "WORLD", "WORLD"]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 250)
+        return .init(width: view.frame.width, height: 400)
     }
 }
 
