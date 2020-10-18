@@ -46,7 +46,7 @@ class PhotosGrillController: LBTAListController<PhotoGrillCell, String>, UIColle
             let width = (view.frame.width - 3 * cellSpacing) / 2
             return.init(width: width, height: width)
         }
-        let width = (view.frame.width - 4 * cellSpacing) / 3
+        let width = (view.frame.width - 4.1 * cellSpacing) / 3
         
         return .init(width: width, height: width)
     }
